@@ -27,9 +27,16 @@ def getText(url):
 
     for word in words:
         text += word.text.split(" ")
-        text = list(filter(lambda c: c.isalpha(), text))
+        text = list(filter(lambda c: c.isalpha(), text)
 
     return text
+
+def tuples(lst, n):
+    for i in range(0, len(lst), n):
+        val = lst[i:i+n]
+        if len(val) == n:
+            yield tuple(val)
+
 
 def getTitle(url):
     req = urllib.request.Request(url, headers = {'User-Agent': 'Mozilla/5.0'})
