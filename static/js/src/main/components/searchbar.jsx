@@ -1,7 +1,7 @@
 import React, {Component}  from 'react';
 import ReactDOM from 'react-dom';
 import { Provider, connect } from 'react-redux';
-
+import { Field, reduxForm } from 'redux-form';
 import { post } from '../actions/bullshit';
 
 @connect((state) =>{
@@ -10,28 +10,34 @@ import { post } from '../actions/bullshit';
   };
 })
 class SearchBar extends Component{
+   state = {
+      url:'',
+      score: 0
+   }
    constructor(props) {
     super(props);
     this.state = {value: ''};
 
-    this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-   handleChange(event) {
-    this.setState({value: event.target.value});
-   }
-
-   handleSubmit(event) {
-    alert('A name was submitted: ' + this.state.value);
-    event.preventDefault();
+   handleSubmit(value) {
+      console.log(post('https://google.com'));
+      // post(this.state.value);
+      // this.setState({ url: value });
   }
 
+  componentDidMount() {
+        const {dispatch, params: {url}} = this.props;
+        dispatch(post(url));
+     }
+
    render() {
+      const {url} = this.props;
       return (
-         <form id="searchForm" onSubmit={this.handleSubmit}>
-            <input id="searchBox" placeholder='Search a company...' type="text" value={this.state.value} onChange={this.handleChange} required/>
-            <input id="searchButton" type="submit" value="Submit" />
+         <form id="searchForm" onSubmit={this.handleSubmit(this.formSubmit)}>
+            <input id="searchBox" placeholder='Enter url...' type="text" value={this.state.value} required/>
+            <button id="searchButton" type="submit">Scan</button>
          </form>
       );
    }

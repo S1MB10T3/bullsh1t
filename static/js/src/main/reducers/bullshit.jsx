@@ -2,6 +2,7 @@ export default function Reducer(
    state={
       fetching: false,
       fetched: false,
+      url: '',
       site: {
          name: '',
          score: 0

@@ -2,15 +2,16 @@ import api from '../../utilities/api';
 
 export function post(value) {
    return function(dispatch) {
-      if(value == null || value == ''){
-         api.post('/api/checker/')
+         api.post('/api/checker/',{
             url: value
-            .then((response) => {
+            })
+            .then( function (response)  {
+               console.log('response');
                dispatch({type: "FETCH_SITE_FULFILLED", payload: response.data})
             })
-            .catch((err) => {
+            .catch( function (err)  {
+               console.log('jawn broke');
                dispatch({type: "FETCH_SITE_ERROR", payload: err})
             })
           }
-      }
-}
+   }
