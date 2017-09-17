@@ -4,6 +4,12 @@ import datetime
 import random
 import re
 
+buzzwords = [['better','world'], ['natural', 'language'],['algorithim']
+,['revolutionary'],['inovative'],['technologies'],['empowering'],['inspiration'],['analytics']
+,['digital' ,'solutions'],['technological', 'innovation'],['progress'], ['hacker'], ['value'], ['myths'],['problem'],['solved']
+,['best'],[]]
+
+
 def getText(url):
     """
         This function will extract all the text from the link given by the user
@@ -26,10 +32,30 @@ def getText(url):
     words += bsObj.findAll("p")
 
     for word in words:
-        text += word.text.split(" ")
+        word = word.text.lower()
+        text += word.split(" ")
         text = list(filter(lambda c: c.isalpha(), text))
 
     return text
+
+def countWords(text):
+    totalWords = len(text)
+    counter = 0
+    for word in text:
+        for word2 in buzzwords:
+            if word in word2:
+                counter += 1
+            else:
+                continue
+    percentage = (counter/totalWords) * 2500
+    return percentage
+
+def tuples(lst, n):
+    for i in range(0, len(lst), n):
+        val = lst[i:i+n]
+        if len(val) == n:
+            yield tuple(val)
+
 
 def getTitle(url):
     req = urllib.request.Request(url, headers = {'User-Agent': 'Mozilla/5.0'})

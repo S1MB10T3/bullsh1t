@@ -19,6 +19,15 @@ class LinkCreate(CreateAPIView):
     serializer_class = LinkCreateUpdateSerializer
     permission_classes = [AllowAny]
 
+    def create(self, request, *args, **kwargs):
+        serializer = self.get_serializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        self.perform_create(serializer)
+        headers = self.get_success_headers(serializer.data)
+        link = Link.objects.filter(id= serializer.instance.id)[0]
+        return Response({'text':link.text, 'bullshit':link.bullshitMeter})
+
+
 class LinkList(ListAPIView):
     queryset = Link.objects.all()
     serializer_class = LinkListSerializer

@@ -2,6 +2,13 @@ import React, {Component}  from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 
+import { post } from '../actions/bullshit';
+
+@connect((state) =>{
+  return {
+    site: state.site
+  };
+})
 class SearchBar extends Component{
    constructor(props) {
     super(props);
@@ -29,6 +36,8 @@ class SearchBar extends Component{
       );
    }
 };
+
+
 
 
 export default SearchBar;
