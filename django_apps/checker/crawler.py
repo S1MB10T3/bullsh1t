@@ -29,7 +29,6 @@ def getText(url):
         text += word.text.split(" ")
         text = list(filter(lambda c: c.isalpha(), text))
 
-
     return text
 
 def getTitle(url):
