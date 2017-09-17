@@ -18,5 +18,6 @@ class Link(models.Model):
         if not self.pk:
             self.text = getText(self.url)
             #self.name = getTitle(self.url)
+            self.bullshitMeter = countWords(self.text)
 
         super(Link, self).save(**kwargs)

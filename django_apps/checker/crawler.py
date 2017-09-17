@@ -4,6 +4,11 @@ import datetime
 import random
 import re
 
+buzzwords = [['better','world'], ['open', 'source'],['natural', 'language'],['algorithim']
+,['revolutionary'],['inovative'],['technologies'],['empowering'],['inspiration'],['analytics']
+,['digital' ,'solutions'],['technological', 'innovation'],['progress']]
+
+
 def getText(url):
     """
         This function will extract all the text from the link given by the user
@@ -27,9 +32,21 @@ def getText(url):
 
     for word in words:
         text += word.text.split(" ")
-        text = list(filter(lambda c: c.isalpha(), text)
+        text = list(filter(lambda c: c.isalpha(), text))
 
     return text
+
+def countWords(text):
+    totalWords = len(text)
+    counter = 0
+    for word in text:
+        for word2 in buzzwords:
+            if word in word2:
+                counter += 1
+            else:
+                continue
+    percentage = (counter/totalWords) * 2500
+    return percentage
 
 def tuples(lst, n):
     for i in range(0, len(lst), n):
