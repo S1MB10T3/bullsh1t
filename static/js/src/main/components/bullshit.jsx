@@ -4,11 +4,14 @@ import { connect } from 'react-redux';
 
 import SearchBar from './searchbar';
 import Results from './results';
+import Particles from 'react-particles-js';
+
 
 
 const Bullshit = () => {
    return (
       <div id="mainDiv">
+        <div id="particles">  <Particles /> </div>
          <div id="header">
             <img src="/static/img/logo.JPG" alt="Bullshit Logo" height="100"></img>
             <h1> how bullsh*t is your website? </h1>
