@@ -12,8 +12,6 @@ class LinkCreateUpdateSerializer(ModelSerializer):
             'url',
         ]
 
-
-
 class LinkListSerializer(ModelSerializer):
     class Meta:
         model = Link

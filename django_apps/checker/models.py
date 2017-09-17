@@ -5,15 +5,18 @@ from .crawler import *
 
 
 class Link(models.Model):
-    name = models.CharField(max_length = 50, db_index = True)
     url = models.TextField()
+    name = models.CharField(max_length = 50, db_index = True)
     text  = models.TextField()
     bullshitMeter = models.DecimalField(
         max_digits = 10,
-        decimal_places = 1
+        decimal_places = 1,
+        default = 0,
     )
 
     def save(self, **kwargs):
         if not self.pk:
-            text = getText(url)
-            name = getTitle(url)
+            self.text = getText(self.url)
+            #self.name = getTitle(self.url)
+
+        super(Link, self).save(**kwargs)
