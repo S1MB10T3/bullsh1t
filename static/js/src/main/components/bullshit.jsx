@@ -1,9 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
+import { connect } from 'react-redux';
+
+import { get } from '../actions/bullshit'
 
 import SearchBar from './searchbar';
-import BullshitScore from './bullshitscore';
+import Results from './results';
 
 
 const Bullshit = () => {
@@ -11,6 +13,7 @@ const Bullshit = () => {
       <div>
          <SearchBar />
          <br/>
+         <Results />
       </div>
    );
 };

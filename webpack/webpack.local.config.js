@@ -30,8 +30,6 @@ config.plugins = [
   })
 ];
 
-config.module.loaders[0].query.plugins = ['react-hot-loader/babel'];
-
 config.devServer = {
   inline: true,
   hot: true,

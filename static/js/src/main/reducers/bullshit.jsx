@@ -2,8 +2,10 @@ export default function Reducer(
    state={
       fetching: false,
       fetched: false,
-      isSiteChecked: false,
-      site: [],
+      site: {
+         name: '',
+         score: 0
+      },
       error: null,
    }, action) {
    switch (action.type) {

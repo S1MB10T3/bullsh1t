@@ -1,4 +1,4 @@
-import api from '../../utils/api';
+import api from '../../utilities/api';
 
 export function get(value) {
    return function(dispatch) {
