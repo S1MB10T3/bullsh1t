@@ -22,6 +22,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__fil
 APPS_DIR = os.path.join(BASE_DIR, 'django_apps')
 
 
+
 # SECRET KEY
 # ------------------------------------------------------------------------------
 # https://docs.djangoproject.com/en/1.10/ref/settings/#std:setting-SECRET_KEY

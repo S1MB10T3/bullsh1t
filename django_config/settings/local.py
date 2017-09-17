@@ -23,6 +23,8 @@ MIDDLEWARE += ('debug_toolbar.middleware.DebugToolbarMiddleware',)
 
 INSTALLED_APPS += ('debug_toolbar', )
 
+ALLOWED_HOSTS = ['0.0.0.0','localhost', '127.0.0.1']
+
 INTERNAL_IPS = ['127.0.0.1', '10.0.2.2', ]
 
 # Hack to have debug toolbar when developing with docker

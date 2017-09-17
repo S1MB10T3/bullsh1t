@@ -27,6 +27,8 @@ urlpatterns = [
     url(r'^api-token-refresh/', refresh_jwt_token),
     url(r'^api-token-verify/', verify_jwt_token),
     url(r'^admin/', admin.site.urls),
+    url(r'^', include('django_apps.checker.api.urls', namespace='shop')),
+
 ]
 
 if settings.DEBUG:
