@@ -18,7 +18,7 @@ def getText(url):
     bsObj = BeautifulSoup(html, 'lxml')
     text = []
     words = bsObj.findAll("h1")
-    words += bsobj.findAll("h2")
+    words += bsObj.findAll("h2")
     words += bsObj.findAll("h3")
     words += bsObj.findAll("h4")
     words += bsObj.findAll("h5")
@@ -26,7 +26,7 @@ def getText(url):
     words += bsObj.findAll("p")
 
     for word in words:
-        text.append(word.text.split(" "))
+        text += word.text.split(" ")
 
     return text
 
