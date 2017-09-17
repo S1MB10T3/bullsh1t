@@ -10,8 +10,12 @@ import Results from './results';
 
 const Bullshit = () => {
    return (
-      <div>
-         <SearchBar />
+      <div id="mainDiv">
+         <div id="header">
+            <img src="/static/img/logo.JPG" alt="Bullshit Logo" height="100"></img>
+            <h1> how bullsh*t is your website? </h1>
+         </div>
+         <SearchBar id="searchbar" />
          <br/>
          <Results />
       </div>

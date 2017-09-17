@@ -34,3 +34,5 @@ stripe
 lxml
 
 django-filter
+
+nltk

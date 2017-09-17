@@ -1,0 +1,47 @@
+* {
+   background-color: #200020;
+}
+#header {
+   color: #efefef;
+   text-align: center;
+   padding-top: 25vh;
+}
+
+#mainDiv {
+   height: 100vh;
+}
+
+#searchForm{
+   text-align: center;
+   padding-top: 5vh;
+   /*background-color: #400040;*/
+}
+
+#searchBox {
+   background:	#800080;
+   color:white;
+   font: 'trebuchet ms', trebuchet;
+   padding:10px 20px;
+   border-radius:10px 0px 0px 10px;
+   -moz-border-radius:10px 0px 0px 10px;
+   -webkit-border-radius:10px 0px 0px 10px;
+   -o-border-radius:10px 0px 0px 10px;
+   border:0 none;
+   font-weight:bold;
+}
+
+#searchButton {
+   background: #eee;
+   padding:10px;
+    border-radius:0px 10px 10px 0px;
+   -moz-border-radius:0px 10px 10px 0px;
+   -webkit-border-radius:0px 10px 10px 0px;
+   -o-border-radius:0px 10px 10px 0px;
+   border:0 none;
+   width:160px;
+}
+
+#resultsDiv {
+   text-align: center;
+   color: white;
+}

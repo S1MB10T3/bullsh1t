@@ -22,9 +22,9 @@ class SearchBar extends Component{
 
    render() {
       return (
-         <form onSubmit={this.handleSubmit}>
-            <input placeholder='Search a company...' type="text" value={this.state.value} onChange={this.handleChange} required/>
-            <input type="submit" value="Submit" />
+         <form id="searchForm" onSubmit={this.handleSubmit}>
+            <input id="searchBox" placeholder='Search a company...' type="text" value={this.state.value} onChange={this.handleChange} required/>
+            <input id="searchButton" type="submit" value="Submit" />
          </form>
       );
    }
