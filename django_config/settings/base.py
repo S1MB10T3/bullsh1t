@@ -241,6 +241,7 @@ JWT_AUTH = {
     'JWT_ALLOW_REFRESH': True,
 }
 
+ALLOWED_HOSTS = ['0.0.0.0',]
 
 # EMAIL CONFIGURATION
 # ------------------------------------------------------------------------------
