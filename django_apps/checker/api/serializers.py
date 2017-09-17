@@ -1,9 +1,5 @@
 from rest_framework.serializers import(
-    HyperlinkedIdentityField,
     ModelSerializer,
-    SerializerMethodField,
-    RelatedField,
-    ReadOnlyField,
 )
 
 from django_apps.checker.models import Link
