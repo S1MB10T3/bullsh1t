@@ -1,23 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { applyMiddleware, createStore } from 'redux';
 import { AppContainer } from 'react-hot-loader';
-import HelloWorld from './components/hello-world';
+import Bullshit from './components/bullshit';
 
+import reducer from './reducers';
+
+const store = createStore(reducer);
 ReactDOM.render(
   <AppContainer>
-    <HelloWorld />
+    <Bullshit />
   </AppContainer>,
   document.getElementById('react-root')
 );
-
-if (module.hot) {
-  module.hot.accept('./components/hello-world', () => {
-    const HelloWorld = require('./components/hello-world').default;
-    ReactDOM.render(
-      <AppContainer>
-        <HelloWorld />
-      </AppContainer>,
-      document.getElementById('react-root')
-    );
-  });
-}
