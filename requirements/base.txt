@@ -29,8 +29,6 @@ pillow
 
 bs4
 
---upgrade watson_developer_cloud
-
 stripe
 
 lxml

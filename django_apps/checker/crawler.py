@@ -27,7 +27,7 @@ def getText(url):
 
     for word in words:
         text += word.text.split(" ")
-
+     
     return text
 
 def getTitle(url):
