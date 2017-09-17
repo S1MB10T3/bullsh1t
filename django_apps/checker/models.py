@@ -12,7 +12,7 @@ class Link(models.Model):
         max_digits = 10,
         decimal_places = 1
     )
-    
+
     def save(self, **kwargs):
         if not self.pk:
             text = getText(url)
