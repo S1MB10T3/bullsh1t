@@ -1,15 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { applyMiddleware, createStore } from 'redux';
-import { AppContainer } from 'react-hot-loader';
+import { createLogger } from 'redux-logger';
+import { Provider } from 'react-redux'
 import Bullshit from './components/bullshit';
 
 import reducer from './reducers';
 
-const store = createStore(reducer);
+import reduxThunk from "redux-thunk";
+import promise from "redux-promise-middleware";
+
+const middleware = applyMiddleware(promise(), reduxThunk, createLogger());
+
+
+const store = createStore(reducer, middleware);
 ReactDOM.render(
-  <AppContainer>
+  <Provider store={store}>
     <Bullshit />
-  </AppContainer>,
+  </Provider>,
   document.getElementById('react-root')
 );
