@@ -4,9 +4,10 @@ import datetime
 import random
 import re
 
-buzzwords = [['better','world'], ['open', 'source'],['natural', 'language'],['algorithim']
+buzzwords = [['better','world'], ['natural', 'language'],['algorithim']
 ,['revolutionary'],['inovative'],['technologies'],['empowering'],['inspiration'],['analytics']
-,['digital' ,'solutions'],['technological', 'innovation'],['progress']]
+,['digital' ,'solutions'],['technological', 'innovation'],['progress'], ['hacker'], ['value'], ['myths'],['problem'],['solved']
+,['best'],[]]
 
 
 def getText(url):
@@ -31,7 +32,8 @@ def getText(url):
     words += bsObj.findAll("p")
 
     for word in words:
-        text += word.text.split(" ")
+        word = word.text.lower()
+        text += word.split(" ")
         text = list(filter(lambda c: c.isalpha(), text))
 
     return text
