@@ -27,6 +27,7 @@ def getText(url):
 
     for word in words:
         text += word.text.split(" ")
+        text = list(filter(lambda c: c.isalpha(), text))
 
     return text
 
