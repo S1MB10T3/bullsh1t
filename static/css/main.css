@@ -5,10 +5,23 @@
    color: #efefef;
    text-align: center;
    padding-top: 25vh;
+   font-family: 'Dosis', sans-serif;
+   font-weight: 800px;
+   z-index: 100000;
 }
 
 #mainDiv {
    height: 100vh;
+   position: relative;
+}
+
+#particles {
+  display: block;
+  position: absolute;
+  width: 50%;
+  float: left;
+  background-color: (0, 0, 0, 255);
+  z-index: -100;
 }
 
 #searchForm{
@@ -44,4 +57,7 @@
 #resultsDiv {
    text-align: center;
    color: white;
+   font-family: 'Dosis', sans-serif;
+   font-weight: 800;
+
 }

@@ -9,6 +9,7 @@ import reducer from './reducers';
 
 import reduxThunk from "redux-thunk";
 import promise from "redux-promise-middleware";
+import Particles from 'react-particles-js';
 
 const middleware = applyMiddleware(promise(), reduxThunk, createLogger());
 
