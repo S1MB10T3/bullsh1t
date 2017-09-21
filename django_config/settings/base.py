@@ -73,6 +73,7 @@ THIRD_PARTY_APPS = [
     'rest_auth',
     'rest_auth.registration',
     'webpack_loader',
+    'corsheaders'
 ]
 
 LOCAL_APPS = [
@@ -94,6 +95,7 @@ DJANGO_MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -243,7 +245,8 @@ JWT_AUTH = {
     'JWT_ALLOW_REFRESH': True,
 }
 
-ALLOWED_HOSTS = ['0.0.0.0',]
+CORS_ORIGIN_ALLOW_ALL = True
+
 
 # EMAIL CONFIGURATION
 # ------------------------------------------------------------------------------

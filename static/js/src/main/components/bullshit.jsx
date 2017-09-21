@@ -13,7 +13,6 @@ const Bullshit = () => {
       <div id="mainDiv">
         <div id="particles">  <Particles /> </div>
          <div id="header">
-            <img src="/static/img/logo.JPG" alt="Bullshit Logo" height="100"></img>
             <h1> how bullsh*t is your website? </h1>
          </div>
          <SearchBar id="searchbar" />

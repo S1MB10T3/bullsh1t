@@ -36,3 +36,5 @@ lxml
 django-filter
 
 nltk
+
+django-cors-headers

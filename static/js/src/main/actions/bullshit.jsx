@@ -2,7 +2,8 @@ import api from '../../utilities/api';
 
 export function post(value) {
    return function(dispatch) {
-         api.post('/api/checker/',{
+         console.log('nut')
+         api.post('/api/checker/create',{
             url: value
             })
             .then( function (response)  {
