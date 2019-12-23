@@ -1,5 +1,5 @@
 
-#Bullsh!t
+# Bullsh!t
 How bullshit is your startup?
 
 Originally we planned to do something with Ethereum during this hackathon but
