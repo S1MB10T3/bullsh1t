@@ -1,6 +1,22 @@
-https://gist.github.com/Yogendra0Sharma/5aa96ebfd0854623a5451c53672088d5
 
-## Dockerized Django+React starter project
+#Bullsh!t
+How bullshit is your startup?
+
+Originally we planned to do something with Ethereum during this hackathon but
+it proved to be a lot harder to learn how develop a DApp than we thought. So
+we pivoted on the last couple of hours to this...
+
+Bullsh!t is a webapp that reads a website, an about/splash page is recommend,
+and scores the site based on the number of tech "buzzwords" that pop up.
+
+Right now the app uses a word bank of "buzzwords" that we thought of in the
+moment, but if we had the time training a natural language processor would be
+ideal, so it would improve by usage with the assistance of human/user input of
+their own rating/review.
+
+
+
+https://gist.github.com/Yogendra0Sharma/5aa96ebfd0854623a5451c53672088d5
 
 ### Requirements
 * [Docker Engine](https://docs.docker.com/engine/installation)
